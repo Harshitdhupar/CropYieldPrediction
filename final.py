@@ -29,7 +29,7 @@ X = df[['State_Name_encoded', 'District_Name_encoded', 'Season_encoded', 'Crop_e
 y = df['Production']
 
 print("🧪 Training model...")
-model = RandomForestRegressor(n_estimators=100, random_state=42)
+model = RandomForestRegressor(n_estimators=10, max_depth=10, random_state=42)
 model.fit(X, y)
 
 print("💾 Saving model and encoders...")
